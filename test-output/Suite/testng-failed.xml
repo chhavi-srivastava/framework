@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="ETO" value="9"/>
+    <parameter name="ITO" value="10"/>
+    <parameter name="grid" value="no"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="gridURL" value=" http://192.168.1.42:4444"/>
+    <parameter name="appURL" value="http://www.fb.com"/>
+    <classes>
+      <class name="script.DemoTest">
+        <methods>
+          <include name="postCondition"/>
+          <include name="testDemo"/>
+          <include name="preCondition"/>
+        </methods>
+      </class> <!-- script.DemoTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
