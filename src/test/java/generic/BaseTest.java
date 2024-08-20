@@ -40,10 +40,10 @@ public class BaseTest //Parent class
 	public void preCondition
 	(     
 			@Optional("no")String grid ,
-		    @Optional("http://localhost:4444")String gridURL ,	
+		    @Optional("http://192.168.1.41:4444")String gridURL ,	
 		  
-		  @Optional("chrome")String browser,
-	      @Optional("http://www.fb.com")String appURL,
+		  @Optional("chrome")String browser,//Change name of the browser here also
+	      @Optional("https://opensource-demo.orangehrmlive.com")String appURL,
 	      @Optional("7")String ITO,
 	      @Optional("6")String ETO
 	  ) throws MalformedURLException
@@ -58,7 +58,7 @@ public class BaseTest //Parent class
 		Reporter.log("Browse is"  +  browser ,true);
 		
 		
-		if(browser.equalsIgnoreCase("yes"))
+		if(grid.equalsIgnoreCase("yes"))//Importtant code to run the test in different browser.
 		{
 			URL url = new URL(gridURL);
 
@@ -109,7 +109,7 @@ public class BaseTest //Parent class
 		wait = new WebDriverWait(driver,Duration.ofSeconds(Integer.valueOf(ETO)));//Converting string ETO in to integer
 	}
 	
-	@AfterMethod
+	@AfterMethod//This is very important for interview---How to take screeshot when test fails with timestamp.
 	public void postCondition(ITestResult result) throws IOException
 	{
         String name = result.getName();

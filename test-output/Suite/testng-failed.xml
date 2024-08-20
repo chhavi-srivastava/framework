@@ -6,16 +6,23 @@
     <parameter name="ITO" value="10"/>
     <parameter name="grid" value="no"/>
     <parameter name="browser" value="chrome"/>
-    <parameter name="gridURL" value=" http://192.168.1.42:4444"/>
+    <parameter name="gridURL" value="http://192.168.1.41:4444"/>
     <parameter name="appURL" value="http://www.fb.com"/>
     <classes>
-      <class name="script.DemoTest">
+      <class name="script.InvalidLogin">
         <methods>
           <include name="postCondition"/>
-          <include name="testDemo"/>
+          <include name="testInvalidLogin"/>
           <include name="preCondition"/>
         </methods>
-      </class> <!-- script.DemoTest -->
+      </class> <!-- script.InvalidLogin -->
+      <class name="script.ValidLogin">
+        <methods>
+          <include name="postCondition"/>
+          <include name="preCondition"/>
+          <include name="testValidLogin"/>
+        </methods>
+      </class> <!-- script.ValidLogin -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

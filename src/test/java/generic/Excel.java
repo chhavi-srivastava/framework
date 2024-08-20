@@ -11,7 +11,7 @@ public class Excel {
 	public static String getData(String path,String sheet,int r,int c)
 	{
 		String v="";
-		try 
+		try //Here instead of throwing Exception , we are using try catch to handle exception.
 		{
 			Workbook wb = WorkbookFactory.create(new FileInputStream(path));
 			v=wb.getSheet(sheet).getRow(r).getCell(c).toString();
@@ -40,6 +40,9 @@ public class Excel {
 		
 		return rowCount;
 	}
+	
+	
+	//This is Home work please do it.
 	
 	//add a method to count columns
 	

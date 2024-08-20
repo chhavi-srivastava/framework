@@ -2,10 +2,10 @@
 <suite name="Suite">
   <test name="Test">
 	  <parameter name ="grid" value ="no"/>
-	  <parameter name ="gridURL" value =" http://192.168.1.42:4444"/>
+	  <parameter name ="gridURL" value ="http://192.168.1.41:4444"/>
 	   
 	  <parameter name ="browser" value ="chrome"/>
-	  <parameter name ="appURL" value ="http://www.fb.com"/>
+	  <parameter name ="appURL" value ="https://opensource-demo.orangehrmlive.com/"/>
 	  <parameter name ="ITO" value ="10"/>
 	  <parameter name ="ETO" value ="9"/>
     <packages>
